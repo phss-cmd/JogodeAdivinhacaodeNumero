@@ -7,9 +7,7 @@ public class JogoDeAdivinhacaoDeNumero {
     public static void main(String[] args) {
 
         Random geradorDeNumero = new Random();
-
         int numeroSecreto = geradorDeNumero.nextInt(100) + 1;
-
         Scanner leitor = new Scanner(System.in);
 
         int sugestaoDoJogador = 0;
@@ -25,14 +23,10 @@ public class JogoDeAdivinhacaoDeNumero {
             sugestaoDoJogador = leitor.nextInt();
 
             if(sugestaoDoJogador == numeroSecreto) {
-
                 acerto = true;
                 System.out.println("Parabens! Você acertou" + numeroSecreto + "!");
                 System.out.println("Você precisou de " + tentativas + "tentativas");
-
-
             }
-
             else  if (sugestaoDoJogador < numeroSecreto) {
                 System.out.println("Passou longe! tente um número maior.");
             }
@@ -40,12 +34,9 @@ public class JogoDeAdivinhacaoDeNumero {
                 System.out.println("Passou longe de mais! Vamos tentar um número menor");
             }
 
-
         }
-
         leitor.close();
         System.out.println("Fim de Jogo");
-
     }
 
 }
